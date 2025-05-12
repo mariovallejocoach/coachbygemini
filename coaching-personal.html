@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Descubre el coaching personal con Mario Vallejo. Un proceso para clarificar tus metas, superar obstáculos y vivir una vida más plena y auténtica."/>
+    <title>Coaching Personal | Mario Vallejo</title>
+    <link href="style-optimizado.css" rel="stylesheet"/>
+    <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body class="coaching-personal">
+    <div class="content-wrap">
+        <nav class="navbar">
+            <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">☰</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="coaching-personal.html" class="active-link">Coaching Personal</a></li>
+                <li><a href="coaching-ejecutivo.html">Coaching Ejecutivo</a></li>
+                <li><a href="quien-soy.html">Quién soy y qué me respalda</a></li>
+            </ul>
+        </nav>
+
+        <header style="background-image: url('coaching-personal.jpg');"> {/* Asegúrate que 'coaching-personal.jpg' exista y esté optimizada */}
+            <h1>Coaching Personal</h1>
+            <p>Un viaje de autodescubrimiento hacia tu mejor versión.</p>
+        </header>
+
+        <section class="main-section">
+            <h2>¿Te sentís estancado en algún área de tu vida?</h2>
+            <p>¿Experimentás la sensación de que podrías estar viviendo con más plenitud, pero no sabés por dónde empezar? ¿Te cuesta tomar decisiones que reflejen realmente quién sos y hacia dónde querés ir? El coaching personal es un proceso de acompañamiento diseñado para que te observes, te reconozcas y acciones desde un lugar más auténtico y consciente.</p>
+            
+            <h3>¿Qué podés lograr a través del coaching personal?</h3>
+            <ul>
+                <li>Clarificar tus metas y propósitos personales con mayor precisión.</li>
+                <li>Identificar y transformar creencias limitantes que te impiden avanzar.</li>
+                <li>Desarrollar habilidades efectivas de gestión emocional y comunicación asertiva.</li>
+                <li>Fortalecer tu autoconfianza y tu capacidad para tomar decisiones alineadas.</li>
+                <li>Diseñar un plan de acción concreto para alcanzar tus objetivos.</li>
+                <li>Vivir en mayor coherencia con tus valores y deseos genuinos.</li>
+            </ul>
+
+            <h3>¿Cómo trabajamos juntos?</h3>
+            <p>A través de conversaciones transformadoras, preguntas poderosas y herramientas prácticas diseñadas a tu medida, te acompaño a explorar nuevas perspectivas, reconocer tus recursos internos y ampliar tu manera de interpretar la vida y los desafíos que enfrentás. Mi rol es facilitarte el camino, no darte las respuestas, para que vos mismo descubras tu potencial.</p>
+            
+            <div class="cta-container">
+                <h3>Todo gran cambio empieza con una buena conversación.</h3>
+                <p>Si sentís que es momento de dar un paso hacia una vida más auténtica y plena, escribime. Podemos agendar una charla exploratoria sin compromiso para conocernos y ver cómo puedo acompañarte.</p>
+                <a class="cta whatsapp" href="https://wa.me/5491131676331?text=Hola%20Mario,%20me%20interesa%20saber%20m%C3%A1s%20sobre%20el%20Coaching%20Personal." target="_blank">Contactarme ahora</a>
+            </div>
+        </section>
+    </div> {/* Cierre de content-wrap */}
+
+    <footer class="footer">
+        <p>Mario Vallejo © <span id="currentYear">2025</span> | Coach Ontológico y Ejecutivo</p>
+        <p><a href="mailto:mario.vallejo@live.com">mario.vallejo@live.com</a></p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".nav-links");
+        const currentYearSpan = document.getElementById("currentYear");
+
+        if (toggle && menu) {
+            toggle.addEventListener("click", function () {
+                const isExpanded = menu.classList.toggle("active");
+                toggle.setAttribute('aria-expanded', isExpanded);
+            });
+        }
+        if (currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
+        }
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+      });
+    </script>
+</body>
+</html>
