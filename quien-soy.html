@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Conoce a Mario Vallejo, Coach Ontológico y Ejecutivo certificado. Descubre mi enfoque, experiencia y cómo puedo acompañarte en tu proceso de transformación."/>
+    <title>Quién soy y qué me respalda | Mario Vallejo</title>
+    <link href="style-optimizado.css" rel="stylesheet"/>
+    <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body class="quien-soy">
+    <div class="content-wrap">
+        <nav class="navbar">
+            <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">☰</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="coaching-personal.html">Coaching Personal</a></li>
+                <li><a href="coaching-ejecutivo.html">Coaching Ejecutivo</a></li>
+                <li><a href="quien-soy.html" class="active-link">Quién soy y qué me respalda</a></li>
+            </ul>
+        </nav>
+
+        <header style="background-image: url('https://images.unsplash.com/photo-1520975661595-6453be3f7070?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80');">
+            <h1>Quién soy y qué me respalda</h1>
+        </header>
+
+        <section class="main-section about-me-section">
+            <div class="profile-container">
+                <div class="profile-text">
+                    <h2>Mario Vallejo</h2>
+                    <p><strong>Coach Ontológico Profesional y Ejecutivo certificado.</strong></p>
+                    <p>Mi pasión es acompañar a personas y líderes a descubrir su potencial, superar sus barreras y diseñar futuros más alineados con sus valores y aspiraciones. Creo firmemente en el poder transformador de las conversaciones y en la capacidad inherente de cada individuo para generar cambios significativos y sostenibles.</p>
+                </div>
+            </div>
+
+            <h3>Mi Enfoque y Filosofía</h3>
+            <p>Integro herramientas de la comunicación efectiva, el liderazgo consciente y las neurociencias aplicadas al coaching. Mi propósito fundamental es guiarte en procesos de transformación auténtica y responsable, donde vos sos el protagonista de tu propio desarrollo.</p>
+            <p>Mi trabajo se basa en la escucha profunda, la empatía y la creación de un espacio de confianza donde puedas explorar, reflexionar y, sobre todo, accionar hacia tus metas.</p>
+            
+            <h3>Mi Formación y Respaldo</h3>
+            <p> Soy Coach Ontológico Profesional certificado por [Nombre de la Escuela o Institución de Coaching, ej: ICF (International Coaching Federation) o una escuela reconocida]. Cuento con una especialización en Coaching Ejecutivo y Liderazgo de [Nombre de la Institución, si aplica].
+            </p>
+            <p>
+                Además, poseo [X años] de experiencia acompañando a individuos en sus procesos de desarrollo personal y a profesionales en el ámbito corporativo, ayudándoles a [menciona 1-2 logros o áreas de impacto generales, ej: mejorar su comunicación, alcanzar sus objetivos, liderar con mayor efectividad].
+            </p>
+            <p>Mi compromiso es con la ética profesional, la confidencialidad y la actualización constante para ofrecerte el mejor acompañamiento posible.</p>
+
+            <div class="cta-container">
+                <h3>¿Listo para conversar?</h3>
+                <p>Si querés saber más sobre mi forma de trabajar o cómo puedo ayudarte, no dudes en contactarme.</p>
+                <a class="cta whatsapp" href="https://wa.me/5491131676331?text=Hola%20Mario,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tus%20servicios%20de%20coaching." target="_blank">Hablemos por WhatsApp</a>
+            </div>
+        </section>
+    </div> {/* Cierre de content-wrap */}
+
+    <footer class="footer">
+        <p>Mario Vallejo © <span id="currentYear">2025</span> | Coach Ontológico y Ejecutivo</p>
+        <p><a href="mailto:mario.vallejo@live.com">mario.vallejo@live.com</a></p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".nav-links");
+        const currentYearSpan = document.getElementById("currentYear");
+
+        if (toggle && menu) {
+            toggle.addEventListener("click", function () {
+                const isExpanded = menu.classList.toggle("active");
+                toggle.setAttribute('aria-expanded', isExpanded);
+            });
+        }
+        if (currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
+        }
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+      });
+    </script>
+    <style>
+        /* Estilos adicionales para la página "Quién Soy" si son necesarios */
+        .about-me-section .profile-container {
+            display: flex;
+            flex-wrap: wrap; /* Para que en mobile se ponga uno debajo del otro */
+            align-items: flex-start; /* Alinea los items al inicio */
+            gap: 2rem; /* Espacio entre la imagen y el texto */
+            margin-bottom: 2rem;
+        }
+        .about-me-section .profile-image-container {
+            flex-shrink: 0; /* Evita que la imagen se encoja */
+        }
+        .about-me-section .profile-image {
+            width: 200px; /* Ajusta el tamaño según tu imagen */
+            height: 200px;
+            border-radius: 50%; /* Imagen redonda */
+            object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+            border: 3px solid #007bff; /* Borde opcional */
+        }
+        .about-me-section .profile-text {
+            flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+        }
+        .about-me-section .profile-text h2 {
+            margin-top: 0; /* Quitar margen superior si la imagen está al lado */
+        }
+
+        @media (max-width: 768px) {
+            .about-me-section .profile-container {
+                flex-direction: column; /* Imagen arriba, texto abajo en mobile */
+                align-items: center; /* Centrar contenido en mobile */
+                text-align: center;
+            }
+            .about-me-section .profile-image-container {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</body>
+</html>
