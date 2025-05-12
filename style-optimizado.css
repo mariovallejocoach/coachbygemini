@@ -1,0 +1,305 @@
+/* Versión actualizada: 12/05/2025 - Mejoras aplicadas */
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fuente más moderna y con mejores fallbacks */
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  display: flex; /* Para footer al final */
+  flex-direction: column; /* Para footer al final */
+  min-height: 100vh; /* Para footer al final */
+}
+
+.content-wrap { /* Para ayudar a empujar el footer hacia abajo */
+  flex: 1;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Transición suave */
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Color de hover más oscuro para mejor feedback */
+}
+
+/* Nota sobre imágenes de fondo:
+   Las imágenes de fondo en CSS (como en los headers) no usan el atributo 'alt'.
+   Asegúrate de que el texto superpuesto tenga buen contraste.
+   Si la imagen transmite información crucial, considera describirla en el texto del cuerpo.
+   Optimiza las imágenes 'coaching-personal.jpg' y 'coaching-ejecutivo.jpg' para la web. */
+
+header {
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 2rem; /* Ajustado para consistencia inicial, se puede sobreescribir */
+  min-height: 40vh; /* Ajustado para consistencia inicial */
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+/* Estilos específicos para headers de cada página si se necesita variar padding o min-height */
+.index header {
+  padding: 5rem 2rem;
+  min-height: 45vh; /* Como estaba antes para index */
+}
+
+.coaching-personal header {
+  padding: 5rem 2rem; /* Ya estaba así */
+}
+
+.coaching-ejecutivo header {
+  padding: 7rem 2rem 4rem 2rem; /* Como estaba antes para ejecutivo */
+  min-height: 60vh; /* Como estaba antes para ejecutivo */
+}
+
+.quien-soy header {
+  padding: 5rem 2rem;
+}
+
+
+header h1 {
+  font-size: 3rem; /* Ligeramente ajustado */
+  margin: 0;
+  font-weight: 700; /* Mayor peso para títulos */
+}
+
+header p {
+  font-size: 1.3rem; /* Ligeramente ajustado */
+  margin-top: 1rem;
+}
+
+section {
+  padding: 2.5rem 2rem; /* Un poco más de padding vertical */
+}
+
+section.main-section { /* Asegura que esta clase se use consistentemente en los HTML para el padding */
+  padding: 2.5rem 2rem;
+}
+
+
+section h2 {
+  font-size: 2.2rem; /* Ligeramente más grande */
+  margin-bottom: 1.5rem; /* Más espacio debajo del h2 */
+  font-weight: 600;
+}
+
+section h3 {
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+section ul {
+  padding-left: 1.5rem;
+  list-style-type: disc; /* Estilo de viñeta explícito */
+}
+
+section ul li {
+  margin-bottom: 0.75rem; /* Un poco más de espacio entre ítems de lista */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* Un poco más de espacio */
+  max-width: 550px; /* Ligeramente más ancho */
+  margin-left: auto; /* Centrar formulario si es más angosto que la sección */
+  margin-right: auto; /* Centrar formulario */
+}
+
+input, textarea {
+  padding: 0.85rem; /* Un poco más de padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit; /* Heredar fuente del body */
+}
+
+textarea {
+  min-height: 120px; /* Altura mínima para el textarea */
+}
+
+button[type="submit"] { /* Más específico para el botón del formulario */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.85rem 1.5rem; /* Más padding horizontal */
+  font-size: 1.1rem; /* Ligeramente más grande */
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.cta.whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px; /* Más redondeado para estilo WhatsApp */
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta.whatsapp:hover {
+    background-color: #1DAE54;
+    color: white; /* Asegurar que el color de texto no cambie con el hover de 'a' general */
+    text-decoration: none; /* Evitar subrayado */
+}
+
+.cta-container {
+  background-color: #f8f9fa; /* Un fondo sutil para destacar el CTA */
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.cta-container h3 {
+  margin-top: 0; /* Remover margen superior si es el primer elemento */
+}
+
+
+.footer {
+  text-align: center;
+  padding: 2.5rem 1rem; /* Más padding vertical */
+  font-size: 0.95rem; /* Ligeramente más grande */
+  color: #777; /* Un gris un poco más oscuro */
+  background-color: #f4f4f4; /* Un fondo muy sutil para el footer */
+  margin-top: auto; /* Empuja el footer al final si el contenido es corto */
+}
+
+/* === MENÚ HAMBURGUESA === */
+.navbar {
+  background-color: #fff;
+  padding: 1rem 1.5rem; /* Un poco más de padding */
+  position: relative; /* Mantenido */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra sutil */
+  z-index: 1000; /* Asegurar que esté por encima de otros elementos si es necesario */
+}
+
+.menu-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none; /* Se mostrará en media query */
+  color: #333; /* Color para el ícono */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem; /* Más espacio entre links */
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #007bff; /* Color original */
+  padding: 0.5rem 0; /* Padding para mejor área de click */
+  position: relative; /* Para pseudo-elemento de subrayado activo */
+}
+
+.nav-links li a:hover {
+  color: #0056b3; /* Color de hover */
+  text-decoration: none; /* Quitar subrayado por defecto en hover, se puede añadir un borde inferior */
+}
+
+/* Estilo para el enlace activo de la página actual */
+.nav-links li a.active-link {
+  color: #0056b3; /* Color distintivo para el activo */
+  font-weight: bold; /* Ya es bold, pero para asegurar */
+}
+
+.nav-links li a.active-link::after { /* Subrayado sutil para el activo */
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Posición del subrayado */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    padding: 3.5rem 1.5rem; /* Padding original para mobile */
+    min-height: 30vh;     /* Min-height original para mobile */
+  }
+
+  .coaching-ejecutivo header { /* Ajuste específico para ejecutivo en mobile si es necesario */
+    padding: 4rem 1.5rem;
+    min-height: 40vh;
+  }
+
+  header h1 {
+    font-size: 2.4rem; /* Ajuste para mobile */
+  }
+
+  header p {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+  }
+
+  section {
+    padding: 2rem 1rem; /* Menos padding en mobile */
+  }
+  section.main-section {
+    padding: 2rem 1rem;
+  }
+
+  .menu-toggle {
+    display: block; /* Mostrar el botón hamburguesa */
+    position: absolute; /* Posicionar dentro de la navbar */
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .nav-links {
+    display: none; /* Ocultar por defecto en mobile */
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 100%; /* Justo debajo de la navbar */
+    left: 0;
+    width: 100%;
+    padding: 1rem 0; /* Padding vertical, sin padding horizontal ya que los items tendrán el suyo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-top: 1px solid #eee; /* Línea separadora */
+  }
+
+  .nav-links.active { /* Cuando el menú está abierto */
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center; /* Centrar texto de los links */
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block; /* Hacer que el link ocupe todo el ancho del li */
+    padding: 0.75rem 1rem; /* Padding para cada link */
+    width: 100%;
+    box-sizing: border-box; /* Incluir padding en el width */
+  }
+  .nav-links li a.active-link::after { /* Ocultar subrayado en mobile o ajustar */
+    display: none; /* Ocultar el ::after en el menú hamburguesa o rediseñar si se prefiere */
+  }
+}
