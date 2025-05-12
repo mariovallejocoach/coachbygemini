@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Mario Vallejo, Coach Ontológico y Ejecutivo. Descubre cómo el coaching ontológico puede transformar tu vida personal y profesional para alcanzar tus metas."/>
+    <title>Mario Vallejo | Coach Ontológico y Ejecutivo</title>
+    <link href="style-optimizado.css" rel="stylesheet"/>
+    <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body class="index">
+    <div class="content-wrap">
+        <nav class="navbar">
+            <div class="logo-container">
+                </div>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">☰</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active-link">Inicio</a></li> {/* Ejemplo de link activo */}
+                <li><a href="coaching-personal.html">Coaching Personal</a></li>
+                <li><a href="coaching-ejecutivo.html">Coaching Ejecutivo</a></li>
+                <li><a href="quien-soy.html">Quién soy y qué me respalda</a></li>
+            </ul>
+        </nav>
+
+        <header style="background-image: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80');">
+            <h1>Mario Vallejo</h1>
+            <p>Coach Ontológico y Ejecutivo</p>
+            <p style="font-size: 1.1rem; margin-top: 0.5rem;"><em>Transformando perspectivas, potenciando acciones.</em></p>
+        </header>
+
+        <section class="main-section">
+            <h2>¿Para qué sirve el coaching ontológico?</h2>
+            <p>El coaching ontológico te ayuda a transformar tu forma de ser, comunicarte y actuar. Facilita cambios sostenibles y significativos a través del lenguaje, las emociones y el cuerpo, permitiéndote:</p>
+            <ul>
+                <li>Alcanzar una mayor conciencia emocional y lingüística.</li>
+                <li>Mejorar tu comunicación interpersonal y tus habilidades de liderazgo.</li>
+                <li>Actuar de manera coherente con tus valores y objetivos más profundos.</li>
+                <li>Superar obstáculos y creencias limitantes que frenan tu desarrollo.</li>
+            </ul>
+            </section>
+
+        <section class="main-section">
+            <h2>¿Qué es y qué no es el coaching ontológico?</h2>
+            <p>Es un proceso profundo y personalizado que cuestiona creencias arraigadas, expande tu campo de posibilidades y genera un aprendizaje transformador y duradero.</p>
+            <h3>¿Qué es?</h3>
+            <ul>
+                <li>Un espacio confidencial de escucha activa y autodescubrimiento.</li>
+                <li>Una poderosa herramienta de desarrollo personal y profesional.</li>
+                <li>Una práctica ética enfocada en tu autonomía y responsabilidad.</li>
+                <li>Un acompañamiento para diseñar y alcanzar futuros deseados.</li>
+            </ul>
+            <h3>¿Qué no es?</h3>
+            <ul>
+                <li>No es psicoterapia ni tratamiento psicológico.</li>
+                <li>No es mentoría (donde se traspasa experiencia directa).</li>
+                <li>No es consultoría (donde se ofrecen soluciones específicas).</li>
+                <li>No es una serie de consejos o recetas mágicas.</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="contacto">
+            <h2>Escribime un mensaje</h2>
+            <p>Si tenés alguna consulta o querés explorar cómo el coaching puede ayudarte, no dudes en contactarme. Respondere a la brevedad.</p>
+            <form action="https://formsubmit.co/mario.vallejo@live.com" method="POST">
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde la web de Mario Vallejo Coach">
+                <input type="text" name="nombre" placeholder="Tu nombre completo" required=""/>
+                <input type="email" name="email" placeholder="Tu correo electrónico" required=""/>
+                <input type="tel" name="telefono" placeholder="Tu teléfono (Opcional)">
+                <textarea name="mensaje" placeholder="Tu mensaje o consulta..." required="" rows="5"></textarea>
+                <input type="hidden" name="_next" value="https://URL_DE_TU_PAGINA_DE_GRACIAS.html"> <button type="submit">Enviar Mensaje</button>
+            </form>
+            <div style="text-align: center; margin-top: 2rem;">
+                <p>O si preferís una comunicación más directa:</p>
+                <a class="cta whatsapp" href="https://wa.me/5491131676331?text=Hola%20Mario,%20te%20contacto%20desde%20tu%20sitio%20web." target="_blank">¡Chateamos por WhatsApp!</a>
+            </div>
+        </section>
+    </div> {/* Cierre de content-wrap */}
+
+    <footer class="footer">
+        <p>Mario Vallejo © <span id="currentYear">2025</span> | Coach Ontológico y Ejecutivo</p>
+        <p><a href="mailto:mario.vallejo@live.com">mario.vallejo@live.com</a></p>
+        </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".nav-links");
+        const currentYearSpan = document.getElementById("currentYear");
+
+        if (toggle && menu) {
+            toggle.addEventListener("click", function () {
+                const isExpanded = menu.classList.toggle("active");
+                toggle.setAttribute('aria-expanded', isExpanded);
+            });
+        }
+
+        if (currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
+        }
+
+        // Cerrar menú al hacer clic en un enlace (para SPA o navegación en la misma página)
+        // Si son cargas de página completa, no es estrictamente necesario pero no daña.
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+      });
+    </script>
+</body>
+</html>
