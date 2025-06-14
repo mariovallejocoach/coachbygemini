@@ -303,3 +303,71 @@ button[type="submit"]:hover {
     display: none; /* Ocultar el ::after en el menú hamburguesa o rediseñar si se prefiere */
   }
 }
+
+/* === INICIO: ESTILOS AÑADIDOS PARA PÁGINA "QUIÉN SOY" === */
+
+/* Contenedor de perfil y texto */
+.about-me-section .profile-container {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: flex-start; 
+    gap: 2rem; 
+    margin-bottom: 2rem;
+}
+
+.about-me-section .profile-image-container {
+    flex-shrink: 0;
+}
+
+/* Imagen de perfil redonda y con borde */
+.about-me-section .profile-image {
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover; 
+    border: 3px solid #007bff;
+}
+
+.about-me-section .profile-text {
+    flex-grow: 1; 
+}
+
+.about-me-section .profile-text h2 {
+    margin-top: 0;
+}
+
+/* Lista de certificaciones con estilo */
+.certifications-list {
+    list-style: none; /* Quita las viñetas por defecto */
+    padding-left: 0;
+    margin-top: 1.5rem;
+}
+
+.certifications-list li {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.certifications-list li::before {
+    content: '✓'; /* Viñeta personalizada de check */
+    color: #007bff; /* Color del check */
+    font-size: 1.5rem;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+
+/* Ajustes para la sección de perfil en móviles */
+@media (max-width: 768px) {
+    .about-me-section .profile-container {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+    }
+    .about-me-section .profile-image-container {
+        margin-bottom: 1rem;
+    }
+}
+/* === FIN: ESTILOS AÑADIDOS === */
