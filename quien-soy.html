@@ -26,6 +26,9 @@
 
         <section class="main-section about-me-section">
             <div class="profile-container">
+                <div class="profile-image-container">
+                    <img src="mario-vallejo-perfil.jpg" alt="Foto de perfil de Mario Vallejo" class="profile-image">
+                </div>
                 <div class="profile-text">
                     <h2>Mario Vallejo</h2>
                     <p><strong>Coach Ontológico Profesional y Ejecutivo certificado.</strong></p>
@@ -34,16 +37,24 @@
             </div>
 
             <h3>Mi Enfoque y Filosofía</h3>
-            <p>Integro herramientas de la comunicación efectiva, el liderazgo consciente y las neurociencias aplicadas al coaching. Mi propósito fundamental es guiarte en procesos de transformación auténtica y responsable, donde vos sos el protagonista de tu propio desarrollo.</p>
-            <p>Mi trabajo se basa en la escucha profunda, la empatía y la creación de un espacio de confianza donde puedas explorar, reflexionar y, sobre todo, accionar hacia tus metas.</p>
+            <p>Mi enfoque de coaching es integral y sinérgico. Fusiono la profundidad del coaching ontológico con estrategias de liderazgo consciente y las más recientes herramientas de la comunicación efectiva y las neurociencias aplicadas. Mi propósito es ser un facilitador en tu proceso de transformación, garantizando que sea auténtico, responsable y, sobre todo, que te empodere a ti como protagonista de tu propio desarrollo.</p>
+            <p>El trabajo se cimienta en la escucha profunda, la empatía y la creación de un espacio de absoluta confianza, diseñado para que puedas explorar, reflexionar y, fundamentalmente, accionar con claridad hacia tus metas.</p>
             
             <h3>Mi Formación y Respaldo</h3>
-            <p> Soy Coach Ontológico Profesional certificado por [Nombre de la Escuela o Institución de Coaching, ej: ICF (International Coaching Federation) o una escuela reconocida]. Cuento con una especialización en Coaching Ejecutivo y Liderazgo de [Nombre de la Institución, si aplica].
-            </p>
+            <p>Mi compromiso con la excelencia profesional se refleja en una formación continua y especializada. Cuento con certificaciones que avalan mi práctica, alineadas con los más altos estándares éticos y de calidad.</p>
+            
+            <ul class="certifications-list">
+                <li><strong>Coach Ontológico Profesional</strong></li>
+                <li><strong>Coach Ejecutivo y de Liderazgo</strong></li>
+                <li><strong>Especialista en Coaching Educativo</strong></li>
+                <li><strong>Formación en Programación Neurolingüística (PNL)</strong></li>
+                <li><strong>Capacitación Avanzada en Neuro Oratoria y Comunicación de Impacto</strong></li>
+            </ul>
+
             <p>
-                Además, poseo [X años] de experiencia acompañando a individuos en sus procesos de desarrollo personal y a profesionales en el ámbito corporativo, ayudándoles a [menciona 1-2 logros o áreas de impacto generales, ej: mejorar su comunicación, alcanzar sus objetivos, liderar con mayor efectividad].
+                Poseo una sólida experiencia acompañando a individuos en sus procesos de desarrollo personal y a profesionales en el ámbito corporativo, ayudándoles a optimizar su comunicación, alcanzar objetivos desafiantes y liderar equipos con mayor efectividad y consciencia.
             </p>
-            <p>Mi compromiso es con la ética profesional, la confidencialidad y la actualización constante para ofrecerte el mejor acompañamiento posible.</p>
+            <p>Mi práctica está regida por un estricto código de ética profesional, garantizando la total confidencialidad y una dedicación constante a tu crecimiento.</p>
 
             <div class="cta-container">
                 <h3>¿Listo para conversar?</h3>
@@ -51,7 +62,7 @@
                 <a class="cta whatsapp" href="https://wa.me/5491131676331?text=Hola%20Mario,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tus%20servicios%20de%20coaching." target="_blank">Hablemos por WhatsApp</a>
             </div>
         </section>
-    </div> {/* Cierre de content-wrap */}
+    </div>
 
     <footer class="footer">
         <p>Mario Vallejo © <span id="currentYear">2025</span> | Coach Ontológico y Ejecutivo</p>
@@ -84,42 +95,5 @@
         });
       });
     </script>
-    <style>
-        /* Estilos adicionales para la página "Quién Soy" si son necesarios */
-        .about-me-section .profile-container {
-            display: flex;
-            flex-wrap: wrap; /* Para que en mobile se ponga uno debajo del otro */
-            align-items: flex-start; /* Alinea los items al inicio */
-            gap: 2rem; /* Espacio entre la imagen y el texto */
-            margin-bottom: 2rem;
-        }
-        .about-me-section .profile-image-container {
-            flex-shrink: 0; /* Evita que la imagen se encoja */
-        }
-        .about-me-section .profile-image {
-            width: 200px; /* Ajusta el tamaño según tu imagen */
-            height: 200px;
-            border-radius: 50%; /* Imagen redonda */
-            object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
-            border: 3px solid #007bff; /* Borde opcional */
-        }
-        .about-me-section .profile-text {
-            flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
-        }
-        .about-me-section .profile-text h2 {
-            margin-top: 0; /* Quitar margen superior si la imagen está al lado */
-        }
-
-        @media (max-width: 768px) {
-            .about-me-section .profile-container {
-                flex-direction: column; /* Imagen arriba, texto abajo en mobile */
-                align-items: center; /* Centrar contenido en mobile */
-                text-align: center;
-            }
-            .about-me-section .profile-image-container {
-                margin-bottom: 1rem;
-            }
-        }
-    </style>
 </body>
 </html>
